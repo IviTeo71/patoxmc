@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo - PatoxMC Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">PATOX<span class="highlight">MC</span></span>
+            </div>
+            <div style="display:flex; align-items:center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="forum.html">Foro</a></li>
+                    <li><a href="staff.html" class="active">Equipo</a></li>
+                </ul>
+                <div id="auth-section">
+                    <!-- Auth JS will inject here -->
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+
+        <!-- Staff Header -->
+        <div class="hero" style="min-height: 40vh; padding: 2rem 0; justify-content: center; text-align: center;">
+            <div class="hero-content animate-on-scroll" style="max-width: 800px;">
+                <h1>CONOCE AL <span class="gradient-text">EQUIPO</span></h1>
+                <p class="animate-on-scroll delay-100">Las personas detrás de PatoxMC que hacen posible esta
+                    experiencia.</p>
+            </div>
+        </div>
+
+        <!-- Dedicated Owner Section -->
+        <section style="padding: 2rem 0; padding-bottom: 0;">
+            <div class="search-bar" style="margin: 0 auto 3rem; max-width: 500px;">
+                <div class="search-input-wrapper">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" id="staff-search text" placeholder="Buscar miembro del equipo..."
+                        oninput="filterStaff(this.value)"
+                        style="background: transparent; border: none; color: white; width: 100%; outline: none; font-family: var(--font-body);">
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div class="staff-owner-card animate-on-scroll delay-200" data-name="PATOMURCIANO">
+                    <div class="owner-crown">
+                        <i data-lucide="crown" style="width: 60px; height: 60px; color: #ff5555;"></i>
+                    </div>
+                    <img src="https://mc-heads.net/avatar/PATOMURCIANO/150" alt="Skin"
+                        style="border-radius: 50%; border: 4px solid #ff5555; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(255, 85, 85, 0.3);">
+                    <h2 style="color: #ff5555; font-size: 2rem; margin-bottom: 0.5rem;">PATOMURCIANO</h2>
+                    <div class="badge"
+                        style="background: rgba(255, 85, 85, 0.2); color: #ff5555; border-color: rgba(255, 85, 85, 0.3); font-size: 1rem; padding: 0.5rem 1rem;">
+                        OWNER</div>
+                    <p style="margin-top: 1rem; font-size: 1.1rem; color: hsl(var(--text-muted));">Fundador y
+                        desarrollador principal de PatoxMC.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff List -->
+        <section class="features" style="padding-top: 0;">
+            <div class="section-header">
+                <h2>ADMINISTRACIÓN</h2>
+            </div>
+            <div class="feature-grid" id="dynamic-staff-container" style="justify-content: center;">
+                <!-- Admins injected here -->
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">PATOXMC</div>
+                <p>&copy; 2026 PatoxMC Network. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://dsc.gg/patoxmc" target="_blank" title="Discord" class="discord-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42.01 1.334-.947 2.419-2.157 2.419z" />
+                        </svg>
+                    </a>
+                    <a href="https://es.namemc.com/server/patox.mc.al" target="_blank" title="NameMC"
+                        class="namemc-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6 18h2V10h8v8h2V6H6z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('dynamic-staff-container');
+            const admins = await getAdmins();
+
+            admins.forEach(admin => {
+                const card = `
+                <div class="feature-card admin-card" data-name="${admin}" style="text-align: center; border-color: rgba(199, 21, 133, 0.3);">
+                    <img src="https://mc-heads.net/avatar/${admin}/100" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #C71585; margin: 0 auto 1.5rem; box-shadow: 0 0 15px rgba(199, 21, 133, 0.2);">
+                    <h3 style="color: #C71585;">${admin}</h3>
+                    <div class="badge" style="background: rgba(199, 21, 133, 0.2); color: #C71585; border-color: rgba(199, 21, 133, 0.3); margin-bottom: 1rem;">ADMIN</div>
+                    <p>Administrador de la comunidad PatoxMC.</p>
+                </div>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+
+            if (window.lucide) lucide.createIcons();
+        });
+
+        function filterStaff(query) {
+            const term = query.toLowerCase();
+
+            // Check Owner
+            const ownerCard = document.querySelector('.staff-owner-card');
+            if (ownerCard) {
+                const name = ownerCard.getAttribute('data-name').toLowerCase();
+                ownerCard.style.display = name.includes(term) ? 'block' : 'none';
+                // If hiding owner, maybe hide the wrapper? user didn't specify, but hiding card is enough.
+                ownerCard.parentElement.style.display = name.includes(term) ? 'flex' : 'none';
+            }
+
+            // Check Admins
+            const admins = document.querySelectorAll('.admin-card');
+            let visibleAdmins = 0;
+            admins.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                if (name.includes(term)) {
+                    card.style.display = 'block';
+                    visibleAdmins++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Optional: Hide "ADMINISTRACIÓN" header if no admins match?
+            // For now, keeping it simple.
+        }
+    </script>
+</body>
+
+</html>
